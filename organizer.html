@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Event</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="organizer.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">CERS</div>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="event.html">EVENT</a></li>
+        <li><a href="#" class="active">ADD EVENT</a></li>
+      </ul>
+    </div>
+    <div class="profile-icon-wrapper">
+      <i class='bx bxs-user-circle profile-icon'></i>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div class="form-container">
+    <h2>Add New Event</h2>
+    <form id="eventForm">
+      <!-- Image -->
+      <label>Event Image</label>
+      <div class="custom-file">
+        <input type="file" id="image" accept="image/*" required>
+        <span class="file-label">Choose Image</span>
+      </div>
+
+      <div class="image-preview" id="previewContainer">
+        <img id="previewImage" src="#" alt="Preview" style="display: none;" />
+      </div>
+
+      <!-- ID to delete -->
+      <label>Event ID (Add or Delete)</label>
+      <input type="number" id="deleteId">
+
+      <!-- Event Info -->
+      <label>Event Title</label>
+      <input type="text" id="title" required>
+
+      <label>Description</label>
+      <textarea id="description" required></textarea>
+
+      <label>Date & Time</label>
+      <input type="datetime-local" id="datetime" required>
+
+      <label>Location</label>
+      <input type="text" id="location" required>
+
+      <!-- Save and Delete Buttons -->
+      <button type="submit">Save Event</button>
+      <button type="button" onclick="deleteEvent()" style="margin-top: 15px; background-color: #c2560e;">Delete Event</button>
+    </form>
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="organizer.js"></script>
+</body>
+</html>
